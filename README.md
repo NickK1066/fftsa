@@ -3,11 +3,11 @@ FFT Spectrum Analyser
 
 fftsa is my developing fast audio spectrum analyser focusing on the tools for DIY audio amp design and build.
 
-The initial design is to support a 24bit 1MSPS ADC with a programmable filter for acquistiion. Multiple devices for processing samples and then displaying the information via a fast GUI interface using Vulkan/OpenGL. 
+The initial design is to support a 24bit 1MSPS ADC with a programmable filter for acquistiion. Multiple devices for processing samples and then displaying the information via a fast GUI interface using Vulkan/OpenGL. The idea is for a box on the bench, the same size roughly as a modern DSO.
 
 Rough target feature list:
-* Programmable ADC provides decimation, filtering and sample ranges up to 1024 KSPS.
-* Lossless sample acqisition using external clock to drive ADC and ensuring low jitter sample interval.
+* Single channel programmable ADC provides decimation, filtering and sample ranges up to 1024 KSPS.
+* Lossless sample acqisition using external clock to drive ADC and ensuring low jitter sample interval source, an RT OS for capture prevents latency (acquisiton on different hardware to display).
 * Configurable sample history 
 * Offline FFT processing with parallel decomposition across hardware, resolution up to sample rate (1Mpts at 1MSPS) using vkFFT.
 * Realtime FFT processing for small FFT, for example 1024 bins allowing trigget history markers and snapshots using coefficient deltas.
@@ -22,4 +22,5 @@ Rough target feature list:
 * Full frequency Bode plot 
 * Store and retrieve samples
 
-Given the processing challenge of 1MSPS with a 1Mpt FFT, the approach scales in processing across cores and hardware platforms. 
+Given the processing challenge of 1MSPS with a 1Mpt FFT, the approach scales in processing across cores and hardware platforms.
+
