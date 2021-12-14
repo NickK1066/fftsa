@@ -24,3 +24,6 @@ Rough target feature list:
 
 Given the processing challenge of 1MSPS with a 1Mpt FFT, the approach scales in processing across cores and hardware platforms.
 
+Dependencies
+* ImGUI
+* vkFFT
