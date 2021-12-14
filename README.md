@@ -6,7 +6,7 @@ fftsa is my developing fast audio spectrum analyser focusing on the tools for DI
 The initial design is to support a 24bit 1MSPS ADC with a programmable filter for acquistiion. Multiple devices for processing samples and then displaying the information via a fast GUI interface using Vulkan/OpenGL. 
 
 Rough target feature list:
-* Programmable ADC provides demication, filtering and sample ranges up to 1024 KSPS.
+* Programmable ADC provides decimation, filtering and sample ranges up to 1024 KSPS.
 * Lossless sample acqisition using external clock to drive ADC and ensuring low jitter sample interval.
 * Configurable sample history 
 * Offline FFT processing with parallel decomposition across hardware, resolution up to sample rate (1Mpts at 1MSPS) using vkFFT.
